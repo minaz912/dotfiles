@@ -3,3 +3,4 @@
 - repo: tyrannicaltoucan/vim-quantum
 - repo: benjie/neomake-local-eslint.vim
 - repo: zhou13/vim-easyescape
+- repo: shime/vim-livedown
