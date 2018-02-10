@@ -1,0 +1,5 @@
+- repo: KeitaNakamura/neodark.vim
+- repo: mileszs/ack.vim
+- repo: tyrannicaltoucan/vim-quantum
+- repo: benjie/neomake-local-eslint.vim
+- repo: zhou13/vim-easyescape
