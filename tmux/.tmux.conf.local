@@ -1,0 +1,17 @@
+tmux_conf_theme_left_separator_main=''
+tmux_conf_theme_left_separator_sub=''
+tmux_conf_theme_right_separator_main=''
+tmux_conf_theme_right_separator_sub=''
+
+# -- status right style
+#
+tmux_conf_theme_status_right='#{pairing}#{prefix}  , %R , %d %b | #{username} | #{hostname} '
+tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#000000' # light gray, white, black
+tmux_conf_theme_status_right_bg='#080808,#d70000,#e4e4e4' # dark gray, red, white
+# tmux_conf_theme_status_right_attr=${tmux_conf_theme_status_right_attr:-'none,none,bold'}
+
+# enable native xterm scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+# vim cursor shape fix
+set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
