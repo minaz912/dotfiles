@@ -1,12 +1,16 @@
 # My Configuration files
 
 ## Environment Info
-- archlinux
-- gnome/awesome-wm
-- tmux
-- neovim
+
+* archlinux
+* awesome-wm + compton
+* tmux
+* neovim
 
 ## Notes
 
-- neovim config is based on: [https://github.com/rafi/vim-config](https://github.com/rafi/vim-config)
-- tmux config is based on: [https://github.com/gpakosz/.tmux](https://github.com/gpakosz/.tmux)
+* awesome-wm config is originally based on:
+  [https://github.com/lcpz/awesome-copycats](https://github.com/lcpz/awesome-copycats), uses a modified version of
+  `powerarrow-dark` theme and adds some additional config
+* neovim config is originally based on: [https://github.com/rafi/vim-config](https://github.com/rafi/vim-config)
+* tmux config is originally based on: [https://github.com/gpakosz/.tmux](https://github.com/gpakosz/.tmux)
