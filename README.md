@@ -3,8 +3,8 @@
 ## Environment Info
 
 * archlinux
-* awesome-wm + compton
-* tmux
+* [awesome-wm](https://github.com/awesomeWM/awesome) + [compton](https://github.com/chjj/compton)
+* [alacritty](https://github.com/jwilm/alacritty) + [tmux](https://github.com/tmux/tmux)
 * neovim
 
 ## Notes
