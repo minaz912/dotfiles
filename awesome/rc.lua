@@ -232,6 +232,14 @@ root.buttons(awful.util.table.join(
 ))
 -- }}}
 
+local volume_notification = nil
+function get_volume_notification_id ()
+    if (volume_notification) then
+        return volume_notification.id
+    end
+    return 0
+end
+
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     -- Take a screenshot
@@ -412,7 +420,7 @@ globalkeys = awful.util.table.join(
             local cmd = io.popen"amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'"
             local text = cmd:read("*a"):match'(%w+)'
             cmd:close()
-            naughty.notify({ text = 'Volume up, current: %' .. text, position = "top_right", timeout = 2 })
+            volume_notification = naughty.notify({ text = 'Volume up, current: %' .. text, position = "top_right", timeout = 2, replaces_id = get_volume_notification_id() })
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
@@ -422,7 +430,7 @@ globalkeys = awful.util.table.join(
             local cmd = io.popen"amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'"
             local text = cmd:read("*a"):match'(%w+)'
             cmd:close()
-            naughty.notify({ text = 'Volume down, current: %' .. text, position = "top_right", timeout = 2 })
+            volume_notification = naughty.notify({ text = 'Volume down, current: %' .. text, position = "top_right", timeout = 2, replaces_id = get_volume_notification_id() })
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
